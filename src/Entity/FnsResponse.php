@@ -3,12 +3,21 @@
 namespace Supasta\FnsService\Entity;
 
 use Exception;
-use Supasta\FnsService\Contract\FnsResponse;
+use Supasta\FnsService\Contract\Response;
 
-class FnsErrorResponse extends FnsResponse
+/**
+ * Class FnsResponse
+ * @package Supasta\FnsService\Entity
+ */
+class FnsResponse extends Response
 {
     private $responseObject;
 
+    /**
+     * FnsResponse constructor.
+     * @param mixed $response The response data to be processed
+     * @throws Exception If the response type is not supported or JSON decoding fails
+     */
     public function __construct(mixed $response)
     {
         if (is_string($response)) {
@@ -24,7 +33,10 @@ class FnsErrorResponse extends FnsResponse
         $this->setData();
     }
 
-    private function setData()
+    /**
+     * Set the response data as an array
+     */
+    private function setData(): void
     {
         $this->data = (array)$this->responseObject;
     }

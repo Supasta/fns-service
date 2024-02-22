@@ -3,7 +3,7 @@
 namespace Supasta\FnsService\Contract;
 
 
-abstract class FnsResponse
+abstract class Response
 {
     protected $data = [];
 
@@ -34,7 +34,7 @@ abstract class FnsResponse
 
     public function getError(): ?object
     {
-        return $this->ERRORS;
+        return $this->ERRORS ?? null;
     }
 
     public function getRequestId()
@@ -45,5 +45,10 @@ abstract class FnsResponse
     public function getInn()
     {
         return $this->inn;
+    }
+
+    public function hasError()
+    {
+        return $this->getError();
     }
 }
