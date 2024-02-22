@@ -43,7 +43,6 @@ class FnsService
     private function getInnFromFms(): Response
     {
         $response = $this->client->setPostData($this->fnsEntity->toArray())->post();
-
         if ($response->getRequestId()) {
             return $this->client->setPostData(['c' => 'get', 'requestId' => $response->getRequestId()])->post();
         } else {

@@ -12,6 +12,7 @@
       "email": "wsupasta@gmail.com"
     }
   ],
-  "minimum-stability": "stable",
-  "require": {}
+  "require": {
+    "php": "^7.4"
+  }
 }

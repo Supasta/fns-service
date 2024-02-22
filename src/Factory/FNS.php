@@ -6,6 +6,7 @@ use DateTime;
 use Supasta\FnsService\Contract\FullName;
 use Supasta\FnsService\Contract\Response;
 use Supasta\FnsService\Entity\FnsEntity;
+use Supasta\FnsService\Entity\FnsResponse;
 use Supasta\FnsService\Entity\ParseFullName;
 use Supasta\FnsService\Service\FnsService;
 
@@ -39,9 +40,9 @@ class FNS
 
     /**
      * Get the INN (Taxpayer Identification Number) using the passport details.
-     * @return Response The response object containing the INN information
+     * @return FnsResponse The response object containing the INN information
      */
-    public function getInn(): Response
+    public function getInn(): FnsResponse
     {
         return (new FnsService())->findInnByPassport($this->entity);
     }

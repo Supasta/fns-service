@@ -3,7 +3,6 @@
 namespace Supasta\FnsService\Factory;
 
 use Exception;
-use Supasta\FnsService\Contract\Response;
 use Supasta\FnsService\Entity\FnsResponse;
 
 /**
@@ -49,10 +48,10 @@ class Client
 
     /**
      * Send a GET request and return the response as an FnsResponse object.
-     * @return Response The response object
+     * @return FnsResponse The response object
      * @throws Exception If there is a cURL error
      */
-    public function get(): Response
+    public function get(): FnsResponse
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -70,10 +69,10 @@ class Client
 
     /**
      * Send a POST request and return the response as an FnsResponse object.
-     * @return Response The response object
+     * @return FnsResponse The response object
      * @throws Exception If there is a cURL error
      */
-    public function post(): Response
+    public function post(): FnsResponse
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->url);

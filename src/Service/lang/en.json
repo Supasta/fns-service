@@ -1,0 +1,9 @@
+{
+  "fam": "Lastname",
+  "nam": "Firstname",
+  "otch": "Patronymic",
+  "docno": "Identify Document number",
+  "Допускается вводить только русские буквы, символы I и V, одиночные пробелы, апострофы, дефисы, точки, запятые и круглые скобки.": "Only Russian letters, I and V symbols, single spaces, apostrophes, hyphens, periods, commas are allowed.",
+  "Не заполнено обязательное поле \"Серия и номер документа\"": "The required field \"Identify Document number\" is not filled",
+  "Поле \"Дата рождения\" должно содержать корректную дату в формате ДД.ММ.ГГГГ": "The \"Date of Birth\" field must store the correct dates in the format DD.MM.YYYY"
+}
