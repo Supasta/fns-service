@@ -1,0 +1,17 @@
+{
+  "name": "supasta/fns-service",
+  "description": "Find out the INN using passport data using the official service of the FNS",
+  "autoload": {
+    "psr-4": {
+      "Supasta\\FnsService\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Supasta",
+      "email": "wsupasta@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {}
+}
