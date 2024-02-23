@@ -1,10 +1,10 @@
 <?php
 
-namespace Supasta\FnsService\Service;
+namespace FnsService\Service;
 
-use Supasta\FnsService\Contract\FnsEntityInterface;
-use Supasta\FnsService\Contract\Response;
-use Supasta\FnsService\Factory\Client;
+use FnsService\Contract\FnsEntityInterface;
+use FnsService\Contract\Response;
+use FnsService\Factory\Client;
 
 /**
  * Class FnsService

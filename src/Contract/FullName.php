@@ -1,6 +1,6 @@
 <?php
 
-namespace Supasta\FnsService\Contract;
+namespace FnsService\Contract;
 
 abstract class FullName
 {

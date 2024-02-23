@@ -1,14 +1,14 @@
 <?php
 
-namespace Supasta\FnsService\Entity;
+namespace FnsService\Entity;
 
-use Supasta\FnsService\Contract\Response;
-use Supasta\FnsService\Factory\Localization;
+use FnsService\Contract\Response;
+use FnsService\Factory\Localization;
 
 /**
  * Class FnsResponse
  * Represents the response from the FNS service.
- * @package Supasta\FnsService\Entity
+ * @package FnsService\Entity
  */
 class FnsResponse extends Response
 {

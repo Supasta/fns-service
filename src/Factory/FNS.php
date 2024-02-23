@@ -1,14 +1,14 @@
 <?php
 
-namespace Supasta\FnsService\Factory;
+namespace FnsService\Factory;
 
 use DateTime;
-use Supasta\FnsService\Contract\FullName;
-use Supasta\FnsService\Contract\Response;
-use Supasta\FnsService\Entity\FnsEntity;
-use Supasta\FnsService\Entity\FnsResponse;
-use Supasta\FnsService\Entity\ParseFullName;
-use Supasta\FnsService\Service\FnsService;
+use FnsService\Contract\FullName;
+use FnsService\Contract\Response;
+use FnsService\Entity\FnsEntity;
+use FnsService\Entity\FnsResponse;
+use FnsService\Entity\ParseFullName;
+use FnsService\Service\FnsService;
 
 /**
  * Class FNS

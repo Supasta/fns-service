@@ -1,9 +1,9 @@
 <?php
 
-namespace Supasta\FnsService\Factory;
+namespace FnsService\Factory;
 
 use Exception;
-use Supasta\FnsService\Entity\FnsResponse;
+use FnsService\Entity\FnsResponse;
 
 /**
  * Class Client

@@ -1,8 +1,8 @@
 <?php
 
-namespace Supasta\FnsService\Entity;
+namespace FnsService\Entity;
 
-use Supasta\FnsService\Contract\FullName;
+use FnsService\Contract\FullName;
 
 class ParseFullName extends FullName
 {

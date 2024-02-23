@@ -1,10 +1,10 @@
 <?php
 
-namespace Supasta\FnsService\Entity;
+namespace FnsService\Entity;
 
 use DateTime;
-use Supasta\FnsService\Contract\FnsEntityInterface;
-use Supasta\FnsService\Contract\FullName as ContractFullName;
+use FnsService\Contract\FnsEntityInterface;
+use FnsService\Contract\FullName as ContractFullName;
 
 /**
  * Class FnsEntity

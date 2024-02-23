@@ -3,7 +3,7 @@
   "description": "Find out the INN using passport data using the official service of the FNS",
   "autoload": {
     "psr-4": {
-      "Supasta\\FnsService\\": "src/"
+      "FnsService\\": "src/"
     }
   },
   "authors": [
@@ -13,6 +13,6 @@
     }
   ],
   "require": {
-    "php": "^7.4"
+    "php": ">=7.4"
   }
 }
