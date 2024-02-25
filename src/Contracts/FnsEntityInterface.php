@@ -1,8 +1,8 @@
 <?php
 
-namespace FnsService\Contract;
+namespace FnsService\Contracts;
 
-interface FnsEntityInterface
+interface FnsEntity
 {
     public function urlEncode(): string;
 

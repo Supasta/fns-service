@@ -1,9 +1,9 @@
 <?php
 
-namespace FnsService\Service;
+namespace FnsService\Services;
 
-use FnsService\Contract\FnsEntityInterface;
-use FnsService\Contract\Response;
+use FnsService\Contracts\FnsEntity;
+use FnsService\Contracts\Response;
 use FnsService\Factory\Client;
 
 /**
@@ -15,7 +15,7 @@ class FnsService
     const API_URL = "https://service.nalog.ru/inn-new-proc.json";
 
     private Client $client;
-    private FnsEntityInterface $fnsEntity;
+    private FnsEntity $fnsEntity;
 
     /**
      * FnsService constructor.
@@ -27,10 +27,10 @@ class FnsService
 
     /**
      * Find the INN (Taxpayer Identification Number) by passport details.
-     * @param FnsEntityInterface $fnsEntity The FNS entity containing the passport details
+     * @param FnsEntity $fnsEntity The FNS entity containing the passport details
      * @return Response The response object containing the INN information
      */
-    public function findInnByPassport(FnsEntityInterface $fnsEntity): Response
+    public function findInnByPassport(FnsEntity $fnsEntity): Response
     {
         $this->fnsEntity = $fnsEntity;
         return $this->getInnFromFms();

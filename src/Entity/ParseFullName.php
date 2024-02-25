@@ -2,7 +2,7 @@
 
 namespace FnsService\Entity;
 
-use FnsService\Contract\FullName;
+use FnsService\Contracts\FullName;
 
 class ParseFullName extends FullName
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace FnsService\Service;
+namespace FnsService\Services;
 
 use Exception;
 use InvalidArgumentException;
-use FnsService\Contract\Localization;
+use FnsService\Contracts\Localization;
 
 /**
  * Class LocalizationService

@@ -3,12 +3,11 @@
 namespace FnsService\Factory;
 
 use DateTime;
-use FnsService\Contract\FullName;
-use FnsService\Contract\Response;
+use FnsService\Contracts\FullName;
 use FnsService\Entity\FnsEntity;
 use FnsService\Entity\FnsResponse;
 use FnsService\Entity\ParseFullName;
-use FnsService\Service\FnsService;
+use FnsService\Services\FnsService;
 
 /**
  * Class FNS

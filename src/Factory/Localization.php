@@ -2,7 +2,7 @@
 
 namespace FnsService\Factory;
 
-use FnsService\Service\LocalizationService;
+use FnsService\Services\LocalizationService;
 
 /**
  * Class Localization

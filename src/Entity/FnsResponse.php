@@ -2,7 +2,7 @@
 
 namespace FnsService\Entity;
 
-use FnsService\Contract\Response;
+use FnsService\Contracts\Response;
 use FnsService\Factory\Localization;
 
 /**

@@ -3,13 +3,13 @@
 namespace FnsService\Entity;
 
 use DateTime;
-use FnsService\Contract\FnsEntityInterface;
-use FnsService\Contract\FullName as ContractFullName;
+use FnsService\Contracts\FnsEntity as ContractsFnsEntity;
+use FnsService\Contracts\FullName as ContractFullName;
 
 /**
  * Class FnsEntity
  */
-class FnsEntity implements FnsEntityInterface
+class FnsEntity implements ContractsFnsEntity
 {
     /**
      * @var FullName The full name of the entity.
