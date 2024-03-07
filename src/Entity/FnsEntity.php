@@ -1,15 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FnsService\Entity;
 
 use DateTime;
-use FnsService\Contracts\FnsEntity as ContractsFnsEntity;
+use FnsService\Contracts\FnsEntity as ContractFnsEntity;
 use FnsService\Contracts\FullName as ContractFullName;
 
 /**
  * Class FnsEntity
  */
-class FnsEntity implements ContractsFnsEntity
+class FnsEntity implements ContractFnsEntity
 {
     /**
      * @var FullName The full name of the entity.

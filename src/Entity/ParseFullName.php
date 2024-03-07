@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FnsService\Entity;
 
 use FnsService\Contracts\FullName;

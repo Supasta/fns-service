@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FnsService\Factory;
 
 use Exception;
@@ -46,26 +48,6 @@ class Client
         return $this;
     }
 
-    /**
-     * Send a GET request and return the response as an FnsResponse object.
-     * @return FnsResponse The response object
-     * @throws Exception If there is a cURL error
-     */
-    public function get(): FnsResponse
-    {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, $this->timeout);
-        $response = curl_exec($ch);
-        if ($response === false) {
-            $error = curl_error($ch);
-            curl_close($ch);
-            throw new Exception('Curl error: ' . $error);
-        }
-        curl_close($ch);
-        return new FnsResponse($response);
-    }
 
     /**
      * Send a POST request and return the response as an FnsResponse object.

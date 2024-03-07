@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FnsService\Services;
 
 use Exception;
@@ -12,7 +14,7 @@ use FnsService\Contracts\Localization;
  */
 class LocalizationService implements Localization
 {
-    private $language = 'en';
+    private $language = 'ru';
     private $languages = ['ru', 'en'];
 
     /**

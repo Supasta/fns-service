@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FnsService\Entity;
 
 use FnsService\Contracts\Response;
@@ -23,13 +25,19 @@ class FnsResponse extends Response
 
     /**
      * Get the error object of the response, if any.
+     * @param string $languages The language for error localization
      * @return object|null The error object or null if not set
      */
-    public function getError($languages = 'ru'): ?object
+    public function getErrors($languages = 'ru'): ?object
     {
         return $this->ERRORS ? (object)$this->prepareErrors($languages) : null;
     }
 
+    /**
+     * Prepare errors for localization based on language.
+     * @param string $languages The language for error localization
+     * @return array The prepared errors array
+     */
     private function prepareErrors($languages): array
     {
         if ($languages) {
@@ -41,18 +49,18 @@ class FnsResponse extends Response
 
     /**
      * Get the request ID from the response.
-     * @return mixed The request ID
+     * @return string|null The request ID
      */
-    public function getRequestId()
+    public function getRequestId(): ?string
     {
         return $this->requestId;
     }
 
     /**
      * Get the INN (Taxpayer Identification Number) from the response.
-     * @return mixed The INN
+     * @return string|null The INN
      */
-    public function getInn()
+    public function getInn(): ?string
     {
         return $this->inn;
     }
@@ -61,8 +69,8 @@ class FnsResponse extends Response
      * Check if the response has an error.
      * @return object|null The error object or null if no error
      */
-    public function hasError()
+    public function hasErrors(): ?object
     {
-        return $this->getError();
+        return $this->getErrors();
     }
 }

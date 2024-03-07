@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FnsService\Factory;
 
+use FnsService\Contracts\Localization as ContractsLocalization;
 use FnsService\Services\LocalizationService;
 
 /**
@@ -15,7 +18,7 @@ class Localization
      *
      * @return LocalizationService A new instance of LocalizationService.
      */
-    static public function make()
+    static public function make(): ContractsLocalization
     {
         return new LocalizationService();
     }
