@@ -1,14 +1,33 @@
 # FnsService
 
 
-## Overview
+<h3 align="center">supasta/fns-service</h3>
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+</div>
+
+---
+
+## 📝 Table of Contents
+
+- [About](#About)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Authors](#authors)
+
+
+
+## 🧐 About <a name = "about"></a>
 **EN**:
 FnsService is a package designed to simplify the process of finding an Individual's Identification Number (INN) by providing a seamless search functionality. With just the individual's full name, date of birth, and passport series and number, this package streamlines the retrieval of crucial identification information. 
 
 **RU**:
 FnsService - пакет, разработанный для упрощения процесса поиска Идентификационного номера налогоплательщика (ИНН) путем предоставления безупречной функциональности поиска. С помощью полного имени человека, даты рождения и серии и номера паспорта этот пакет оптимизирует получение важной идентификационной информации.
 
-## Installation
+## 🔧 Installation <a name = "installation"></a>
 
 **EN**:
 You can install this package via Composer by running:
@@ -20,7 +39,7 @@ You can install this package via Composer by running:
 composer require supasta/fns-service
 ```
 
-## Usage
+## 🎈 Usage <a name="usage"></a>
 ```php
 <?php
 require __DIR__ . '/vendor/autoload.php';
@@ -45,6 +64,11 @@ if ($fnsResponse->hasErrors()) {
     var_dump($fnsResponse->inn);
 }
 ```
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+
 
 ## License
 
