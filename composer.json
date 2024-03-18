@@ -1,6 +1,6 @@
 {
   "name": "supasta/fns-service",
-  "description": "Find out the INN using passport data using the non-official service of the FNS",
+  "description": "Пакет для поиска ИНН физического лица, используя сервис ФНС РФ",
   "autoload": {
     "psr-4": {
       "FnsService\\": "src/"
