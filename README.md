@@ -1,114 +1,57 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
-</p>
+# FnsService
 
-<h3 align="center">supasta/fns-service</h3>
 
-<div align="center">
+## Overview
+**EN**:
+FnsService is a package designed to simplify the process of finding an Individual's Identification Number (INN) by providing a seamless search functionality. With just the individual's full name, date of birth, and passport series and number, this package streamlines the retrieval of crucial identification information. 
 
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+**RU**:
+FnsService - пакет, разработанный для упрощения процесса поиска Идентификационного номера налогоплательщика (ИНН) путем предоставления безупречной функциональности поиска. С помощью полного имени человека, даты рождения и серии и номера паспорта этот пакет оптимизирует получение важной идентификационной информации.
 
-</div>
+## Installation
 
----
+**EN**:
+You can install this package via Composer by running:
 
-<p align="center"> Few lines describing your project.
-    <br> 
-</p>
+**RU**:
+Вы можете установить этот пакет через Composer, запустив:
 
-## 📝 Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
-
-## 🧐 About <a name = "about"></a>
-
-Write about 1-2 paragraphs describing the purpose of your project.
-
-## 🏁 Getting Started <a name = "getting_started"></a>
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
+```bash
+composer require supasta/fns-service
 ```
 
-### Installing
+## Usage
+```php
+<?php
+require __DIR__ . '/vendor/autoload.php';
 
-A step by step series of examples that tell you how to get a development env running.
+use FnsService\Factory\FNS;
 
-Say what the step will be
+/**
+ * If u have simple full name
+ */
+$fnsResponse = FNS::parse("Иванов Иван", "02.06.1999", "1234 123456")->getInn();
+/**
+ * If u have full name more than 3 words
+ */
+$fnsResponse = FNS::direct("Галиев", "Шавкат", "Тимур Угли", "02.06.1999", "FA123456")->getInn();
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+/**
+ * Check errors and handle it
+ */
+if ($fnsResponse->hasErrors()) {
+    var_dump($fnsResponse->getErrors());
+} else {
+    var_dump($fnsResponse->inn);
+}
 ```
 
-### And coding style tests
+## License
 
-Explain what these tests test and why
+**EN**:
+This package is open-sourced software licensed under the <a href="https://opensource.org/license/MIT">MIT license</a>.
 
-```
-Give an example
-```
+**RU**:
+Этот пакет представляет собой программное обеспечение с открытым исходным кодом, лицензированное по <a href="https://opensource.org/license/MIT">лицензии MIT</a>.
 
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+**Tags:** fns, inn, ИНН, ФНС
