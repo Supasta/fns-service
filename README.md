@@ -67,7 +67,7 @@ if ($fnsResponse->hasErrors()) {
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@Supasta](https://github.com/Supasta) - Idea & Initial work
 
 
 ## License
